@@ -6,21 +6,11 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from '@material-ui/core/ListItemText';
 import Link from 'next/link';
-import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
-  root: {
-    minHeight: "100vh",
-  }
-});
-
-function Index({ films }) {
-  const classes = useStyles();
-  
+function Index({ films }) {  
   return (
     <Grid 
       container 
-      classes={classes}
       justify="center" 
       alignItems="center" 
     >
@@ -29,8 +19,12 @@ function Index({ films }) {
           <List>
             {films.map((film, id) => {
               return (
-                <Link href="/film/[id]" as={`/film/${id + 1}`}>
-                  <ListItem button key={film.episode_id}>
+                <Link 
+                  href="/film/[id]" 
+                  as={`/film/${id + 1}`} 
+                  key={film.episode_id}
+                >
+                  <ListItem button>
                     <ListItemText>
                         {film.title}
                     </ListItemText>
