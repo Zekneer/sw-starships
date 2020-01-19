@@ -7,8 +7,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from '@material-ui/core/ListItemText';
 import Link from 'next/link';
 
-function Index({ films }) {  
-  console.log(films);
+function Index({ films }) {
   return (
     <Grid 
       container 
