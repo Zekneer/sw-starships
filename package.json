@@ -4,7 +4,9 @@
   "description": "Starships for \"Star Wars\" movies",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,11 @@
   },
   "homepage": "https://github.com/Zekneer/sw-starships#readme",
   "dependencies": {
+    "@material-ui/core": "^4.8.3",
+    "axios": "^0.19.1",
     "next": "^9.2.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-query": "^0.3.24"
   }
 }
