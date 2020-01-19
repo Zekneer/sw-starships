@@ -8,6 +8,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Link from 'next/link';
 
 function Index({ films }) {  
+  console.log(films);
   return (
     <Grid 
       container 
@@ -18,10 +19,12 @@ function Index({ films }) {
         <Card>
           <List>
             {films.map((film, id) => {
+              const filmId = film.url.match(/(\d+)\/$/)[1];
+
               return (
                 <Link 
                   href="/film/[id]" 
-                  as={`/film/${id + 1}`} 
+                  as={`/film/${filmId}`} 
                   key={film.episode_id}
                 >
                   <ListItem button>

@@ -11,7 +11,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from '@material-ui/core/ListItemText';
 import Link from 'next/link';
 
-function Index({ film, starships }) {
+function Film({ film, starships }) {
   return (
     <Grid 
       container 
@@ -54,7 +54,7 @@ function Index({ film, starships }) {
   );
 };
 
-Index.getInitialProps = async function(ctx) {
+Film.getInitialProps = async function(ctx) {
   const { id = 1 } = ctx.query;
   const response = await axios(`https://swapi.co/api/films/${id}`);
   const film = response.data;
@@ -69,4 +69,4 @@ Index.getInitialProps = async function(ctx) {
   };
 };
 
-export default Index;
+export default Film;
